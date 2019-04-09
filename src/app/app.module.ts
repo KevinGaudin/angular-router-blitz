@@ -1,13 +1,22 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
+import { AppRoutingModule } from './app-routing.module';
+import { SilkConfigComponent } from './config/silk-config.component';
+import { BagsConfigComponent } from './config/bags-config.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent ],
-  bootstrap:    [ AppComponent ]
+  declarations: [
+    AppComponent,
+    SilkConfigComponent,
+    BagsConfigComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
